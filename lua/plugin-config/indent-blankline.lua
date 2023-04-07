@@ -23,21 +23,13 @@ indent_blankline.setup({
   -- 用 treesitter 判断上下文
   show_current_context = true,
   show_current_context_start = true,
-  -- char_highlight_list = {
-  --   "IndentBlanklineIndent1",
-  --   "IndentBlanklineIndent2",
-  --   "IndentBlanklineIndent3",
-  --   "IndentBlanklineIndent4",
-  --   "IndentBlanklineIndent5",
-  --   "IndentBlanklineIndent6",
-  -- },
   char_highlight_list = {
     "IndentBlanklineIndent1",
     "IndentBlanklineIndent2",
-  },
-  space_char_highlight_list = {
-    "IndentBlanklineIndent1",
-    "IndentBlanklineIndent2",
+    "IndentBlanklineIndent3",
+    "IndentBlanklineIndent4",
+    "IndentBlanklineIndent5",
+    "IndentBlanklineIndent6",
   },
   show_trailing_blankline_indent = false,
   context_patterns = {
@@ -56,7 +48,6 @@ indent_blankline.setup({
   -- echo &filetype
   filetype_exclude = {
     "null-ls-info",
-    "dashboard",
     "packer",
     "terminal",
     "help",

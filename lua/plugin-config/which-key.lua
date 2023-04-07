@@ -5,9 +5,6 @@ if not status then
 end
 
 local wk_mappings = {
-  d = {
-    name = "Do Hover",
-  },
   f = {
     name = "Format Code",
   },

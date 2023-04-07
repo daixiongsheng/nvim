@@ -20,7 +20,7 @@ lualine.setup({
       right = "",
     },
     globalstatus = true,
-    disabled_filetypes = { "dashboard", "NvimTree", "Outline" },
+    disabled_filetypes = { "NvimTree", "Outline" },
   },
   extensions = { "nvim-tree" },
   sections = {

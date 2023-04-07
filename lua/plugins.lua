@@ -59,11 +59,6 @@ packer.startup({
     -- telescope extensions
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
-    use({
-      "glepnir/dashboard-nvim",
-      -- event = 'VimEnter',
-      requires = { "nvim-tree/nvim-web-devicons" },
-    })
     -- project
     use("ahmedkhalf/project.nvim")
     -- notify
@@ -254,6 +249,7 @@ packer.startup({
     use({
       "notjedi/nvim-rooter.lua",
     })
+    use 'fedepujol/move.nvim'
     if paccker_bootstrap then
       packer.sync()
     end

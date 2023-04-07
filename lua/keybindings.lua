@@ -65,13 +65,6 @@ map("i", "<C-l>", "<ESC>A")
 map("n", "<C-s>", "<cmd>w<CR>")
 map("i", "<C-s>", "<ESC><cmd>w<CR>a")
 map("v", "<C-s>", "<cmd>w<CR>")
--- move 整行
-map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
-map("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
-map("n", "<A-k>", ":m .-2<CR>==")
-map("n", "<A-j>", ":m .+1<CR>==")
-map("v", "<A-k>", ":m '<-2<CR>gv-gv")
-map("v", "<A-j>", ":m '>+1<CR>gv-gv")
 
 -- 插件快捷键
 local pluginKeys = {}
@@ -85,6 +78,8 @@ require("mappings.buffer-line").setup(Map)
 require("mappings.search").setup(Map)
 -- todo
 require("mappings.todo").setup(Map)
+require("mappings.spell").setup(Map)
+require("mappings.move").setup(Map)
 -- nvim-tree
 pluginKeys.nvimTreeList = require("mappings.nvim-tree").setup(Map)
 -- Telescope 列表中 插入模式快捷键

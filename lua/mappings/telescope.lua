@@ -10,11 +10,11 @@ M.setup = function(Map)
       -- 上下移动
       ["<C-j>"] = "move_selection_next",
       ["<C-k>"] = "move_selection_previous",
-      ["<C-n>"] = "move_selection_next",
-      ["<C-p>"] = "move_selection_previous",
+      ["<Down>"] = "move_selection_next",
+      ["<Up>"] = "move_selection_previous",
       -- 历史记录
-      ["<Down>"] = "cycle_history_next",
-      ["<Up>"] = "cycle_history_prev",
+      ["<C-n>"] = "cycle_history_next",
+      ["<C-p>"] = "cycle_history_prev",
       -- 关闭窗口
       ["<esc>"] = "close",
       ["<C-c>"] = "close",
