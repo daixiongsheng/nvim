@@ -1,6 +1,8 @@
 local keybindings = require("keybindings")
 local ts_utils = require("nvim-lsp-ts-utils")
-local opts = {
+local coq = require "coq"
+
+local opts = coq.lsp_ensure_capabilities({
   flags = {
     debounce_text_changes = 150,
   },
@@ -58,7 +60,7 @@ local opts = {
     -- no default maps, so you may want to define some here
     keybindings.mapTsLSP.map(buffer)
   end,
-}
+})
 
 return {
   on_setup = function(server)

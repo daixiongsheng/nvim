@@ -16,3 +16,11 @@ css
 deps
 utils
 classnames
+lualine
+yanky
+navbuddy
+gitsigns
+spellgood
+s
+cword
+end

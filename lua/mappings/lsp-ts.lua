@@ -6,7 +6,7 @@ M.setup = function(Map)
 				Map.map_buffer(buffer, mode, from, to, opt)
 			end
 			map_buffer("n", "gs", ":TSLspOrganize<CR>", 'Organize')
-			map_buffer("n", "gR", ":TSLspRenameFile<CR>", 'Rename file')
+			map_buffer("n", "<leader>rN", ":TSLspRenameFile<CR>", 'Rename file')
 			map_buffer("n", "gi", ":TSLspImportAll<CR>", 'Import all')
 		end
 	}

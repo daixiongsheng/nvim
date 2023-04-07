@@ -29,18 +29,24 @@ local function enter(prompt_buffer)
   actions.close(prompt_buffer)
 end
 
-local function next_color(prompt_buffer)
-  actions.move_selection_next(prompt_buffer)
+local function set_colorschme()
   local selected = action_state.get_selected_entry()
   local cmd = "colorscheme " .. selected[1]
-  vim.cmd(cmd)
+  if not pcall(function()
+    vim.cmd(cmd)
+  end) then
+    vim.notify("colorscheme " .. selected[1] .. " not found")
+  end
+end
+
+local function next_color(prompt_buffer)
+  actions.move_selection_next(prompt_buffer)
+  set_colorschme()
 end
 
 local function prev_color(prompt_buffer)
   actions.move_selection_previous(prompt_buffer)
-  local selected = action_state.get_selected_entry()
-  local cmd = "colorscheme " .. selected[1]
-  vim.cmd(cmd)
+  set_colorschme()
 end
 
 local opts = {

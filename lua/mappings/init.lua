@@ -16,13 +16,13 @@ local defaults = {
   nowait = true,
 }
 M.map = function(mode, from, to, opt)
-  if type(opt) == 'string' then
+  if type(opt) == "string" then
     opt = { desc = opt }
   else
     opt = opt or {}
   end
   opt = vim.tbl_deep_extend("force", {}, defaults, opt)
-  if type(to) == 'function' then
+  if type(to) == "function" then
     vim.keymap.set(mode, from, to, opt)
   else
     vim.api.nvim_set_keymap(mode, from, to, opt)
@@ -38,7 +38,7 @@ M.map_buffer = function(buffer, mode, from, to, opt)
     noremap = true,
     silent = true,
   }
-  if type(opt) == 'string' then
+  if type(opt) == "string" then
     opt = { desc = opt }
   else
     opt = opt or {}

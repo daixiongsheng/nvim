@@ -36,6 +36,9 @@ require("plugin-config.yanky")
 require("plugin-config.change-colorscheme")
 require("plugin-config.nvim-gps")
 require("plugin-config.move")
+require("plugin-config.inc-rename")
+require("plugin-config.glance")
+
 -- 内置LSP
 require("lsp.setup")
 require("lsp.cmp")

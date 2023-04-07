@@ -245,11 +245,23 @@ packer.startup({
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
     })
-
+    use({
+      "smjonas/inc-rename.nvim",
+    })
     use({
       "notjedi/nvim-rooter.lua",
     })
-    use 'fedepujol/move.nvim'
+    use({
+      "dnlhc/glance.nvim",
+      config = function()
+        require("glance").setup({
+          -- your configuration
+        })
+      end,
+    })
+    use("fedepujol/move.nvim")
+    use("ms-jpq/coq_nvim")
+
     if paccker_bootstrap then
       packer.sync()
     end

@@ -102,4 +102,5 @@ pluginKeys.gitsigns = require("mappings.gitsigns").setup(Map)
 pluginKeys.nvim_surround = require("mappings.nvim-surround").setup(Map)
 pluginKeys.navbuddy = require("mappings.navbuddy").setup(Map)
 pluginKeys.yanky = require("mappings.yanky").setup(Map)
+pluginKeys.glance = require("mappings.glance").setup(Map)
 return pluginKeys
