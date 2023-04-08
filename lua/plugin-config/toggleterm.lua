@@ -19,7 +19,7 @@ toggleterm.setup({
 })
 
 local Terminal = require("toggleterm.terminal").Terminal
-local mapToggleTerm = require("keybindings").mapToggleTerm
+local toggleterm = require("keybindings").toggleterm
 
 local lazygit = Terminal:new({
   cmd = "lazygit",
@@ -29,10 +29,10 @@ local lazygit = Terminal:new({
     border = "double",
   },
   on_open = function(term)
-    mapToggleTerm.on_open(term.buffer)
+    toggleterm.on_open(term.buffer)
   end,
   on_close = function(_)
-    mapToggleTerm.on_close()
+    toggleterm.on_close()
   end,
 })
 
@@ -86,4 +86,4 @@ end
 M.toggleG = function()
   lazygit:toggle()
 end
-mapToggleTerm.setup(M)
+toggleterm.setup(M)

@@ -6,7 +6,7 @@ if not status then
 end
 
 -- 列表操作快捷键
-local list_keys = require("keybindings").nvimTreeList
+local list_keys = require("keybindings").nvim_tree
 
 local function open_nvim_tree(data)
   -- buffer is a directory

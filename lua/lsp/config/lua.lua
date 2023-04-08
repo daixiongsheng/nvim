@@ -38,7 +38,7 @@ local opts = {
     client.server_capabilities.document_formatting = false
     client.server_capabilities.document_range_formatting = false
     -- 绑定快捷键
-    require("keybindings").mapLSP.map(buffer)
+    require("keybindings").lsp.map(buffer)
   end,
 }
 

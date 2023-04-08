@@ -31,7 +31,7 @@ autocmd("BufWritePre", {
 })
 
 -- 失去焦点时自动保存
-autocmd("FocusLost", {
+autocmd({ "FocusLost", 'BufLeave' }, {
   group = myAutoGroup,
   pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx" },
   callback = function()
@@ -39,15 +39,7 @@ autocmd("FocusLost", {
     vim.cmd("w")
   end,
 })
--- 失去焦点时自动保存
-autocmd("BufLeave", {
-  group = myAutoGroup,
-  pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx" },
-  callback = function()
-    vim.lsp.buf.format({ sync = true })
-    vim.cmd("w")
-  end,
-})
+
 -- -- 修改lua/plugins.lua 自动更新插件
 -- autocmd("BufWritePost", {
 --   group = myAutoGroup,

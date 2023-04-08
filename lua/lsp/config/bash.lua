@@ -9,7 +9,7 @@ return {
         client.server_capabilities.document_formatting = false
         client.server_capabilities.document_range_formatting = false
 
-        require("keybindings").mapLSP.map(buffer)
+        require("keybindings").lsp.map(buffer)
       end,
     })
   end,

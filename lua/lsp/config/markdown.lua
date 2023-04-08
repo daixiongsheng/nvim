@@ -3,7 +3,7 @@ local opts = {
     debounce_text_changes = 150,
   },
   on_attach = function(client, buffer)
-    require("keybindings").mapLSP.map(buffer)
+    require("keybindings").lsp.map(buffer)
   end,
 }
 return {

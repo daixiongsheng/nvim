@@ -33,16 +33,16 @@ M.setup = function(Map)
 				["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
 				["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
 				-- snippets 跳转
-				["<C-l>"] = cmp.mapping(function(_)
-					if vim.fn["vsnip#available"](1) == 1 then
-						feedkey("<Plug>(vsnip-expand-or-jump)", "")
-					end
-				end, { "i", "s" }),
-				["<C-h>"] = cmp.mapping(function()
-					if vim.fn["vsnip#jumpable"](-1) == 1 then
-						feedkey("<Plug>(vsnip-jump-prev)", "")
-					end
-				end, { "i", "s" }),
+				-- ["<C-l>"] = cmp.mapping(function(_)
+				-- 	if vim.fn["vsnip#available"](1) == 1 then
+				-- 		feedkey("<Plug>(vsnip-expand-or-jump)", "")
+				-- 	end
+				-- end, { "i", "s" }),
+				-- ["<C-h>"] = cmp.mapping(function()
+				-- 	if vim.fn["vsnip#jumpable"](-1) == 1 then
+				-- 		feedkey("<Plug>(vsnip-jump-prev)", "")
+				-- 	end
+				-- end, { "i", "s" }),
 				-- super Tab
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then

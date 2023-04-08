@@ -59,7 +59,7 @@ telescope.setup({
     -- vertical , center , cursor, horizontal
     layout_strategy = "horizontal",
     -- 窗口内快捷键
-    mappings = require("keybindings").telescopeList,
+    mappings = require("keybindings").telescope,
     -- 图片预览
     buffer_previewer_maker = new_maker,
     wrap_results = false,

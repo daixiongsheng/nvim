@@ -12,7 +12,7 @@ return {
 
         -- local function buf_set_option(...) vim.api.nvim_buf_set_option(buffer, ...) end
         -- 绑定快捷键
-        require("keybindings").mapLSP.map(buffer)
+        require("keybindings").lsp.map(buffer)
       end,
     })
   end,
