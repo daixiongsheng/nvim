@@ -31,7 +31,7 @@ autocmd("BufWritePre", {
 })
 
 -- 失去焦点时自动保存
-autocmd({ "FocusLost", 'BufLeave' }, {
+autocmd({ "FocusLost", "BufLeave" }, {
   group = myAutoGroup,
   pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx" },
   callback = function()
@@ -50,15 +50,6 @@ autocmd({ "FocusLost", 'BufLeave' }, {
 --       vim.api.nvim_command("PackerSync")
 --     end
 --   end,
--- })
-
--- Highlight on yank
--- autocmd("TextYankPost", {
---   callback = function()
---     vim.highlight.on_yank()
---   end,
---   group = myAutoGroup,
---   pattern = "*",
 -- })
 
 -- 用o换行不要延续注释
