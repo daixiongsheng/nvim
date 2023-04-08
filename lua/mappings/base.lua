@@ -60,5 +60,10 @@ M.setup = function(Map)
   -- treesitter 折叠
   map("n", "<leader>Z", ":foldclose<CR>")
   map("n", "<leader>z", ":foldopen<CR>")
+
+  -- select all
+  map("n", "<c-a>", "gg<s-v>G")
+  map("v", "<c-a>", "<esc>gg<s-v>G")
+  map("i", "<c-a>", "<esc>gg<s-v>G")
 end
 return M

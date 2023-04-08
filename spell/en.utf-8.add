@@ -27,3 +27,7 @@ end
 init
 eol
 dg
+TermOpen
+Esc
+CMD
+Lua

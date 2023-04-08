@@ -36,7 +36,9 @@ autocmd({ "FocusLost", "BufLeave" }, {
   pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx" },
   callback = function()
     vim.lsp.buf.format({ sync = true })
-    vim.cmd("w")
+    pcall(function()
+      vim.cmd("w")
+    end)
   end,
 })
 
