@@ -31,3 +31,8 @@ TermOpen
 Esc
 CMD
 Lua
+cmd
+Ctrl
+bp
+#ap/!
+Map/!

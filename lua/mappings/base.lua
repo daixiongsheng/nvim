@@ -47,10 +47,12 @@ M.setup = function(Map)
   -- 在visual mode 里粘贴不要复制
   map("v", "p", '"_dP')
   -- insert 模式下，跳到行首行尾
-  map("i", "<C-h>", "<ESC>I")
-  map("i", "<C-l>", "<ESC>A")
-  map("i", "<a-h>", "<left>")
-  map("i", "<a-l>", "<right>")
+  map("i", "<a-l>", "<ESC>A")
+  map("i", "<a-h>", "<ESC>I")
+  map("i", "<c-h>", "<left>")
+  map("i", "<c-l>", "<right>")
+  map("i", "<c-j>", "<down>")
+  map("i", "<c-k>", "<up>")
 
   -- Ctrl + S to save
   map("n", "<C-s>", "<cmd>w<CR>")
