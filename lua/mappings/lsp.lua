@@ -19,7 +19,7 @@ M.setup = function(Map)
       -- hover
       map_buffer("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>")
       -- finder
-      map_buffer("n", "gr", "<cmd>Lspsaga lsp_finder<CR>")
+      map_buffer("n", "gR", "<cmd>Lspsaga lsp_finder<CR>")
       -- format
       map_buffer("n", "<leader>f", "<cmd>lua vim.lsp.buf.format({ sync = true })<CR>", { desc = "Foramt" })
       map_buffer("v", "<leader>f", "<cmd>lua vim.lsp.buf.format({ sync = true })<CR>", { desc = "Foramt" })

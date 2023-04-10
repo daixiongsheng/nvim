@@ -3,17 +3,17 @@ M.setup = function(Map)
   local actions = require("glance").actions
   -- Lua
   Map.map("n", "gD", "<CMD>Glance definitions<CR>")
-  Map.map("n", "gR", "<CMD>Glance references<CR>")
+  Map.map("n", "gr", "<CMD>Glance references<CR>")
   Map.map("n", "gY", "<CMD>Glance type_definitions<CR>")
   Map.map("n", "gM", "<CMD>Glance implementations<CR>")
   return {
     mappings = {
       list = {
-        ["j"] = actions.next, -- Bring the cursor to the next item in the list
+        ["j"] = actions.next,     -- Bring the cursor to the next item in the list
         ["k"] = actions.previous, -- Bring the cursor to the previous item in the list
         ["<Down>"] = actions.next,
         ["<Up>"] = actions.previous,
-        ["<Tab>"] = actions.next_location, -- Bring the cursor to the next location skipping groups in the list
+        ["<Tab>"] = actions.next_location,       -- Bring the cursor to the next location skipping groups in the list
         ["<S-Tab>"] = actions.previous_location, -- Bring the cursor to the previous location skipping groups in the list
         ["<C-u>"] = actions.preview_scroll_win(5),
         ["<C-d>"] = actions.preview_scroll_win(-5),
