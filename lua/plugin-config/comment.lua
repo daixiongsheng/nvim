@@ -60,7 +60,7 @@ local default_opts = {
   },
   ---Pre-hook, called before commenting the line
   ---@type fun(ctx: Ctx):string
-  pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+  pre_hook = require("ts_context_commentstring.integrations.comment_nvim").create_pre_hook(),
   ---Post-hook, called after commenting is done
   ---@type fun(ctx: Ctx)
   post_hook = nil,
@@ -68,5 +68,5 @@ local default_opts = {
 
 -- 关闭了extra快捷键，只用keybindings里定义的基础快捷键
 comment.setup({
-  vim.tbl_deep_extend("force", default_opts, require("keybindings").comment)
+  vim.tbl_deep_extend("force", default_opts, require("keybindings").comment),
 })

@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   local actions = require("telescope.actions")
   local utils = require("yanky.utils")
@@ -12,7 +14,7 @@ M.setup = function(Map)
       i = {
         ["<c-p>"] = mapping.put("p"),
         ["<c-k>"] = function(...)
-          actions.move_selection_previous(...);
+          actions.move_selection_previous(...)
         end,
         ["<c-x>"] = mapping.delete(),
         ["<c-r>"] = mapping.set_register(utils.get_default_register()),

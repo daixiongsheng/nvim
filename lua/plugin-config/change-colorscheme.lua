@@ -33,8 +33,8 @@ local function set_colorschme()
   local selected = action_state.get_selected_entry()
   local cmd = "colorscheme " .. selected[1]
   if not pcall(function()
-    vim.cmd(cmd)
-  end) then
+        vim.cmd(cmd)
+      end) then
     vim.notify("colorscheme " .. selected[1] .. " not found")
   end
 end
@@ -77,4 +77,3 @@ function CC()
 end
 
 vim.api.nvim_create_user_command("ChangeColorScheme", CC, {})
-vim.cmd([[colorscheme tokyonight]])

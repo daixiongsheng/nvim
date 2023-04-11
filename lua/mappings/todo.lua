@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   Map.map("n", "]t", function()
     require("todo-comments").jump_next()

@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   Map.map("n", "<leader>rn", "<cmd>IncRename<CR>")
   Map.map("n", "<leader>rn", function()

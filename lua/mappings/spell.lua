@@ -16,6 +16,8 @@ local function add_prev()
 end
 
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   Map.map("v", "<leader>dg", add_to_dictionary, "add to dictionary")
   Map.map("n", "<leader>dg", add_to_dictionary, "add to dictionary")

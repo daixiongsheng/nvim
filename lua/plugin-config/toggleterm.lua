@@ -14,7 +14,7 @@ toggleterm.setup({
   end,
   start_in_insert = true,
   float_opts = {
-    border = "rounded"
+    border = "rounded",
   },
 })
 

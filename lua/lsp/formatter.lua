@@ -50,6 +50,6 @@ augroup FormatAutogroup
   autocmd!
   autocmd BufWritePost *.js,*.rs,*.lua FormatWrite
 augroup END
-]],
+]] ,
   true
 )

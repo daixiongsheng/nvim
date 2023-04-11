@@ -54,13 +54,13 @@ autocmd({ "FocusLost", "BufLeave" }, {
 --   end,
 -- })
 
-autocmd("TextYankPost", {
-  callback = function()
-    vim.highlight.on_yank({ higroup = "IncSearch", timeout = 700 })
-  end,
-  group = myAutoGroup,
-  pattern = "*",
-})
+-- autocmd("TextYankPost", {
+--   callback = function()
+--     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 700 })
+--   end,
+--   group = myAutoGroup,
+--   pattern = "*",
+-- })
 
 -- 用o换行不要延续注释
 autocmd("BufEnter", {

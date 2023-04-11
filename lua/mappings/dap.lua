@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   -- -- 开始
   -- Map.map("n", "<leader>dd", ":RustDebuggables<CR>")

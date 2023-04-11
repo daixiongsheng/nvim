@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   local map = Map.map
   local map_with = Map.map_with

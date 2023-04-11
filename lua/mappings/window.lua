@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   -- windows 分屏快捷键
   -- 取消 s 默认功能

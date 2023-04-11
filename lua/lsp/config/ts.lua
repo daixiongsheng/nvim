@@ -1,6 +1,6 @@
 local keybindings = require("keybindings")
 local ts_utils = require("nvim-lsp-ts-utils")
-local coq = require "coq"
+local coq = require("coq")
 
 local opts = coq.lsp_ensure_capabilities({
   flags = {
@@ -24,10 +24,10 @@ local opts = coq.lsp_ensure_capabilities({
       import_all_timeout = 5000, -- ms
       -- lower numbers = higher priority
       import_all_priorities = {
-        same_file = 1,      -- add to existing import statement
-        local_files = 2,    -- git files or files with relative path markers
+        same_file = 1, -- add to existing import statement
+        local_files = 2, -- git files or files with relative path markers
         buffer_content = 3, -- loaded buffer content
-        buffers = 4,        -- loaded buffer names
+        buffers = 4, -- loaded buffer names
       },
       import_all_scan_buffers = 100,
       import_all_select_source = false,

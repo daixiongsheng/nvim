@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   -- New tab
   Map.map("n", "T", "<cmd>tabnew<cr>", "New Tah")
@@ -22,4 +24,3 @@ M.setup = function(Map)
   return {}
 end
 return M
-

@@ -3,17 +3,17 @@ if not status then
   vim.notify("没有找到 telescope")
   return
 end
-local previewers = require('telescope.previewers')
-local Job = require('plenary.job')
+local previewers = require("telescope.previewers")
+local Job = require("plenary.job")
 
 local new_maker = function(filepath, buffer, opts)
   filepath = vim.fn.expand(filepath)
   Job:new({
-    command = 'file',
-    args = { '--mime-type', '-b', filepath },
+    command = "file",
+    args = { "--mime-type", "-b", filepath },
     on_exit = function(j)
-      local mime_types = { 'text', 'image' }
-      local mime_type = vim.split(j:result()[1], '/')[1]
+      local mime_types = { "text", "image" }
+      local mime_type = vim.split(j:result()[1], "/")[1]
       for i = 0, #mime_types do
         if mime_types[i] == mime_type then
           previewers.buffer_previewer_maker(filepath, buffer, opts)
@@ -21,16 +21,16 @@ local new_maker = function(filepath, buffer, opts)
         end
       end
       vim.schedule(function()
-        vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { 'BINARY' })
+        vim.api.nvim_buf_set_lines(buffer, 0, -1, false, { "BINARY" })
       end)
-    end
+    end,
   }):sync()
 end
 
 local mime_hook = function(filepath, buffer, opts)
   local is_image = function(filepath)
-    local image_extensions = { 'png', 'jpg', 'ico', }
-    local split_path = vim.split(filepath:lower(), '.', { plain = true })
+    local image_extensions = { "png", "jpg", "ico" }
+    local split_path = vim.split(filepath:lower(), ".", { plain = true })
     local extension = split_path[#split_path]
     return vim.tbl_contains(image_extensions, extension)
   end
@@ -38,17 +38,16 @@ local mime_hook = function(filepath, buffer, opts)
     local term = vim.api.nvim_open_term(buffer, {})
     local function send_output(_, data, _)
       for _, d in ipairs(data) do
-        vim.api.nvim_chan_send(term, d .. '\r\n')
+        vim.api.nvim_chan_send(term, d .. "\r\n")
       end
     end
 
-    vim.fn.jobstart(
-      {
-        'tiv', filepath -- Terminal image viewer command
-      },
-      { on_stdout = send_output, stdout_buffered = true, pty = true })
+    vim.fn.jobstart({
+      "tiv",
+      filepath, -- Terminal image viewer command
+    }, { on_stdout = send_output, stdout_buffered = true, pty = true })
   else
-    require('telescope.previewers.utils').set_preview_message(buffer, opts.winid, 'Binary cannot be previewed')
+    require("telescope.previewers.utils").set_preview_message(buffer, opts.winid, "Binary cannot be previewed")
   end
 end
 
@@ -66,36 +65,36 @@ telescope.setup({
     preview = {
       mime_hook,
     },
-    path_display = { 'absolute' },
+    path_display = { "absolute" },
     vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
-      '--hidden',
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
+      "--hidden",
     },
-    set_env = { ['COLORTERM'] = 'truecolor' },
+    set_env = { ["COLORTERM"] = "truecolor" },
     file_ignore_patterns = {
-      '%/.git/',
-      '.git/',
-      '%/.eden-mono/',
-      '%/node_modules/',
-      'node_modules',
-      '.yarn',
-      '%/dist/',
-      '%/idl/',
-      '%/api/',
-      '%/log/',
-      '%.d.ts',
-      '%.test.ts',
+      "%/.git/",
+      ".git/",
+      "%/.eden-mono/",
+      "%/node_modules/",
+      "node_modules",
+      ".yarn",
+      "%/dist/",
+      "%/idl/",
+      "%/api/",
+      "%/log/",
+      "%.d.ts",
+      "%.test.ts",
     },
     layout_config = {
       height = 0.95,
       preview_cutoff = 20,
-      prompt_position = 'bottom',
+      prompt_position = "bottom",
       width = 0.9,
     },
   },

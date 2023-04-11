@@ -29,9 +29,7 @@ for _, value in ipairs(configs) do
         return v ~= config
       end, disabled_config) then
     if not pcall(require, string.format("plugin-config.%s", config)) then
-      print("load config: " .. config .. " error")
-    else
-      -- print("load " .. config)
+      vim.notify("load config: " .. config .. " error")
     end
   end
 end

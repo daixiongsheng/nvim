@@ -45,7 +45,7 @@ nvim_tree.setup({
     ignore_list = {},
   },
   -- prefer_startup_root = true,
-  root_dirs = { '.git', '.hg', '.svn' },
+  root_dirs = { ".git", ".hg", ".svn" },
   diagnostics = {
     enable = true,
     icons = {
@@ -72,8 +72,8 @@ nvim_tree.setup({
       ".codebase",
     },
     exclude = {
-      'only_dev.js'
-    }
+      "only_dev.js",
+    },
   },
   view = {
     -- 宽度
@@ -99,7 +99,7 @@ nvim_tree.setup({
       -- 首次打开大小适配
       resize_window = true,
       -- 打开文件时关闭 tree
-      quit_on_open = true,
+      quit_on_open = false,
       window_picker = {
         enable = false,
         exclude = {

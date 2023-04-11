@@ -1,5 +1,7 @@
 local M = {}
 
+--- @param Map Map
+
 M.setup = function(Map)
   Map.map("n", "<C-p>", "<cmd>Telescope find_files<cr>")
   Map.map("n", "<C-f>", "<cmd>Telescope live_grep<cr>")

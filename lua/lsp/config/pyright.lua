@@ -9,7 +9,6 @@ return {
         client.server_capabilities.document_formatting = false
         client.server_capabilities.document_range_formatting = false
 
-
         -- local function buf_set_option(...) vim.api.nvim_buf_set_option(buffer, ...) end
         -- 绑定快捷键
         require("keybindings").lsp.map(buffer)

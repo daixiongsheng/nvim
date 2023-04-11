@@ -1,4 +1,6 @@
 local M = {}
+
+--- @param Map Map
 M.setup = function(Map)
   -- move 整行
   Map.map("i", "<a-k>", "<Esc>:m .-2<CR>==gi")

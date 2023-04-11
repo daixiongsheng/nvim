@@ -2,7 +2,7 @@ local M = {}
 
 function M.setup()
   local dap = require("dap")
-  dap.set_log_level('DEBUG')
+  dap.set_log_level("DEBUG")
   dap.configurations.lua = {
     {
       type = "nlua",
@@ -32,4 +32,5 @@ end
 function M.open()
   require("osv").run_this()
 end
+
 return M
