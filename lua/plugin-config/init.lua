@@ -26,10 +26,12 @@ for _, value in ipairs(configs) do
   config_path = vim.split(config_path, ".", { plain = true })
   local config = unpack(config_path, 1, #config_path - 1)
   if f.all(function(_, v)
-    return v ~= config
-  end, disabled_config) then
+        return v ~= config
+      end, disabled_config) then
     if not pcall(require, string.format("plugin-config.%s", config)) then
-      print("loda config: " .. config .. " error")
+      print("load config: " .. config .. " error")
+    else
+      -- print("load " .. config)
     end
   end
 end
