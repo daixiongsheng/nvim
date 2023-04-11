@@ -34,7 +34,6 @@ null_ls.setup({
         "yaml",
         "graphql",
       },
-      prefer_local = "node_modules/.bin",
     }),
     -- rustfmt
     -- rustup component add rustfmt

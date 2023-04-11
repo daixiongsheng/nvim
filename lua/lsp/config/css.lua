@@ -18,9 +18,9 @@ return {
       },
       on_attach = function(client, buffer)
         -- 禁用格式化功能，交给专门插件插件处理
-        client.server_capabilities.document_formatting = false
-        client.server_capabilities.document_range_formatting = false
-
+        -- client.server_capabilities.document_formatting = false
+        -- client.server_capabilities.document_range_formatting = false
+        --
         -- 绑定快捷键
         require("keybindings").lsp.map(buffer)
       end,

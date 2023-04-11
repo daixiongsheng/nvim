@@ -21,10 +21,11 @@ autocmd("TermOpen", {
   command = "startinsert",
 })
 
+local pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx", "*.css", "*.less", "*.scss" }
 -- 保存时自动格式化
 autocmd("BufWritePre", {
   group = myAutoGroup,
-  pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx" },
+  pattern = pattern,
   callback = function()
     vim.lsp.buf.format({ sync = true })
   end,
@@ -33,7 +34,7 @@ autocmd("BufWritePre", {
 -- 失去焦点时自动保存
 autocmd({ "FocusLost", "BufLeave" }, {
   group = myAutoGroup,
-  pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx" },
+  pattern = pattern,
   callback = function()
     vim.lsp.buf.format({ sync = true })
     pcall(function()

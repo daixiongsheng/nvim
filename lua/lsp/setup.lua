@@ -6,7 +6,7 @@ local lspconfig = require("lspconfig")
 
 -- 安装列表
 -- { key: 服务器名， value: 配置文件 }
--- key 必须为下列网址列出的 server name，不可以随便写
+-- key 必须为下lsp.config.css"lsp.config.css"lsp.config.css"lsp.config.css"列网址列出的 server name，不可以随便写
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
   bashls = require("lsp.config.bash"),
@@ -14,6 +14,7 @@ local servers = {
   pyright = require("lsp.config.pyright"),
   html = require("lsp.config.html"),
   cssls = require("lsp.config.css"),
+  -- cssmodules_ls = require("lsp.config.css-module"),
   emmet_ls = require("lsp.config.emmet"),
   jsonls = require("lsp.config.json"),
   tsserver = require("lsp.config.ts"),
