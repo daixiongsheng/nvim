@@ -4,6 +4,9 @@ if not status then
   return
 end
 
+notify.setup({
+  background_colour = "#000000",
+})
 vim.notify = notify
 
 vim.lsp.handlers["textDocument/definition"] = function(err, result, ctx, config)

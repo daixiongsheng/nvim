@@ -35,7 +35,6 @@ nvim_tree.setup({
   open_on_tab = true,
   -- 拦截鼠标
   -- hijack_cursor = true,
-  -- project plugin 需要这样设置
   -- sync_root_with_cwd = false,
   update_cwd = true,
   update_focused_file = {
@@ -44,7 +43,7 @@ nvim_tree.setup({
     update_root = true,
     ignore_list = {},
   },
-  -- prefer_startup_root = true,
+  prefer_startup_root = true,
   root_dirs = { ".git", ".hg", ".svn" },
   diagnostics = {
     enable = true,
@@ -73,6 +72,7 @@ nvim_tree.setup({
     },
     exclude = {
       "only_dev.js",
+      "local"
     },
   },
   view = {

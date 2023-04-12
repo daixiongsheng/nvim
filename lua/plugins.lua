@@ -59,8 +59,6 @@ packer.startup({
     -- telescope extensions
     use("LinArcX/telescope-env.nvim")
     use("nvim-telescope/telescope-ui-select.nvim")
-    -- project
-    use("ahmedkhalf/project.nvim")
     -- notify
     use({
       "rcarriga/nvim-notify",

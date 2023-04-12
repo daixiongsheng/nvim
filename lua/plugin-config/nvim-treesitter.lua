@@ -73,7 +73,7 @@ treesitter.setup({
     enable_autocmd = false,
   },
 })
--- 开启 Folding 模块
+-- -- 开启 Folding 模块
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 -- 默认不要折叠
