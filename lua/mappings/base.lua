@@ -24,8 +24,6 @@ M.setup = function(Map)
   map("c", "<C-j>", "<C-n>", { noremap = false })
   map("c", "<C-k>", "<C-p>", { noremap = false })
   -- 上下滚动浏览
-  map("n", "<C-j>", "5j")
-  map("n", "<C-k>", "5k")
   map("v", "<C-j>", "5j")
   map("v", "<C-k>", "5k")
   -- Quick move

@@ -33,8 +33,8 @@ M.setup = function(Map)
       map_buffer("n", "<F2>", "<cmd>Lspsaga diagnostic_jump_next<CR>")
       map_buffer("n", "<F3>", "<cmd>Lspsaga diagnostic_jump_prev<CR>")
 
-      map_buffer("n", "<C-j>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
-      map_buffer("n", "<C-k>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
+      -- map_buffer("n", "<C-j>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>")
+      -- map_buffer("n", "<C-k>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>")
     end,
   }
 end
