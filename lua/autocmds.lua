@@ -43,26 +43,6 @@ autocmd({ "FocusLost", "BufLeave" }, {
   end,
 })
 
--- -- 修改lua/plugins.lua 自动更新插件
--- autocmd("BufWritePost", {
---   group = myAutoGroup,
---   -- autocmd BufWritePost plugins.lua source <afile> | PackerSync
---   callback = function()
---     if vim.fn.expand("<afile>") == "lua/plugins.lua" then
---       vim.api.nvim_command("source lua/plugins.lua")
---       vim.api.nvim_command("PackerSync")
---     end
---   end,
--- })
-
--- autocmd("TextYankPost", {
---   callback = function()
---     vim.highlight.on_yank({ higroup = "IncSearch", timeout = 700 })
---   end,
---   group = myAutoGroup,
---   pattern = "*",
--- })
-
 -- 用o换行不要延续注释
 autocmd("BufEnter", {
   group = myAutoGroup,

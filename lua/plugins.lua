@@ -251,11 +251,6 @@ packer.startup({
     })
     use({
       "dnlhc/glance.nvim",
-      config = function()
-        require("glance").setup({
-          -- your configuration
-        })
-      end,
     })
     use("fedepujol/move.nvim")
     use("ms-jpq/coq_nvim")
