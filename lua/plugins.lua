@@ -68,7 +68,7 @@ packer.startup({
     })
     -- nvim-tree
     use({
-      "kyazdani42/nvim-tree.lua",
+      "nvim-tree/nvim-tree.lua",
       requires = "nvim-tree/nvim-web-devicons",
     })
     -- treesitter

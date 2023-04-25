@@ -1,3 +1,13 @@
+local ok, lspkind = pcall(require, 'lspkind')
+if not ok then
+  vim.notify('lspkind not found')
+  return {}
+end
+local ok, lspsaga = pcall(require, 'lspsaga')
+if not ok then
+  vim.notify('lspsaga not found')
+  return {}
+end
 -- 自定义图标
 vim.diagnostic.config({
   virtual_text = true,
@@ -10,8 +20,6 @@ for type, icon in pairs(signs) do
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 end
 
--- lspkind
-local lspkind = require("lspkind")
 lspkind.init({
   -- default: true
   -- with_text = true,
@@ -57,8 +65,8 @@ lspkind.init({
   },
 })
 
-local lspsaga = require("lspsaga")
-lspsaga.setup({ -- defaults ...
+lspsaga.setup({
+  -- defaults ...
   debug = false,
   use_saga_diagnostic_sign = true,
   -- diagnostic sign

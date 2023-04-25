@@ -1,9 +1,13 @@
--- https://github.com/neovim/nvim-lspconfig/wiki/Autocompletion
--- https://github.com/hrsh7th/nvim-cmp
--- https://github.com/onsails/lspkind-nvim
-
-local cmp = require("cmp")
-
+local ok, cmp = pcall(require, 'cmp')
+if not ok then
+  vim.notify('cmp not found')
+  return
+end
+local ok, ui = pcall(require, 'lsp.ui')
+if not ok then
+  vim.notify('ui not found')
+  return
+end
 cmp.setup({
   -- 指定 snippet 引擎
   snippet = {
@@ -42,7 +46,7 @@ cmp.setup({
   -- 快捷键
   mapping = require("keybindings").cmp.setup(cmp),
   -- 使用lspkind-nvim显示类型图标
-  formatting = require("lsp.ui").formatting,
+  formatting = ui.formatting,
 })
 
 -- Use buffer source for `/`.
