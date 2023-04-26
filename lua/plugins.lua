@@ -255,6 +255,8 @@ packer.startup({
     use("fedepujol/move.nvim")
     use("ms-jpq/coq_nvim")
     use("brenoprata10/nvim-highlight-colors")
+    use("tpope/vim-abolish")
+    use("chaoren/vim-wordmotion")
 
     if paccker_bootstrap then
       packer.sync()

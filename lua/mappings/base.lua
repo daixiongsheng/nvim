@@ -6,8 +6,8 @@ M.setup = function(Map)
   local map_with = Map.map_with
 
   -- reset
-  map("v", "q", "")
-  map("n", "q", "")
+  -- map("v", "q", "")
+  -- map("n", "q", "")
   -- $跳到行尾不带空格 (交换$ 和 g_)
   map("v", "$", "g_")
   map("v", "g_", "$")
@@ -29,12 +29,8 @@ M.setup = function(Map)
   -- Quick move
   map("n", "J", "10gj")
   map("n", "K", "10gk")
-  map("n", "<C-u>", "10k")
-  map("n", "<C-d>", "10j")
   map("v", "J", "10gj")
   map("v", "K", "10gk")
-  map("v", "<C-u>", "10k")
-  map("v", "<C-d>", "10j")
   -- Clear highlighting on escape in normal mode
   map("n", "<esc>", "<cmd>noh<cr><esc>")
   map("n", "<esc>^[", "<esc>^[")
@@ -67,5 +63,9 @@ M.setup = function(Map)
   map("n", "<c-a>", "gg<s-v>G")
   map("v", "<c-a>", "<esc>gg<s-v>G")
   map("i", "<c-a>", "<esc>gg<s-v>G")
+
+  -- 大小写
+  map("n", "<C-u>", "gul")
+  map("n", "<A-u>", "gUl")
 end
 return M
