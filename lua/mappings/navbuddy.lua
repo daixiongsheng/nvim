@@ -3,7 +3,7 @@ local M = {}
 --- @param Map Map
 M.setup = function(Map)
   local actions = require("nvim-navbuddy.actions")
-  Map.map("i", "<leader>n", "<cmd>Navbuddy<cr>")
+  -- Map.map("i", "<leader>n", "<cmd>Navbuddy<cr>")
   Map.map("n", "<leader>n", "<cmd>Navbuddy<cr>")
   Map.map("v", "<leader>n", "<cmd>Navbuddy<cr>")
   return {
