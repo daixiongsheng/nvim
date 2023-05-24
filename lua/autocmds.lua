@@ -32,16 +32,16 @@ autocmd("BufWritePre", {
 })
 
 -- 失去焦点时自动保存
-autocmd({ "FocusLost", "BufLeave" }, {
-  group = myAutoGroup,
-  pattern = pattern,
-  callback = function()
-    vim.lsp.buf.format({ sync = true })
-    pcall(function()
-      vim.cmd("w")
-    end)
-  end,
-})
+-- autocmd({ "FocusLost", "BufLeave" }, {
+--   group = myAutoGroup,
+--   pattern = pattern,
+--   callback = function()
+--     vim.lsp.buf.format({ sync = true })
+--     pcall(function()
+--       vim.cmd("w")
+--     end)
+--   end,
+-- })
 
 -- 用o换行不要延续注释
 autocmd("BufEnter", {

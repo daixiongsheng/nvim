@@ -43,6 +43,9 @@ local pluginConfigs = {
       "famiu/bufdelete.nvim",
     },
   },
+  ["lvimuser/lsp-inlayhints.nvim"] = {
+    branch = "anticonceal",
+  },
   -- lualine
   ["nvim-lualine/lualine.nvim"] = {
     requires = { "nvim-tree/nvim-web-devicons", opt = true },

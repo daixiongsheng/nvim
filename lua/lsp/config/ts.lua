@@ -1,5 +1,6 @@
 local keybindings = require("keybindings")
 local ts_utils = require("nvim-lsp-ts-utils")
+local inlayhints = require("lsp-inlayhints")
 local coq = require("coq")
 
 local opts = coq.lsp_ensure_capabilities({
@@ -55,6 +56,7 @@ local opts = coq.lsp_ensure_capabilities({
       require_confirmation_on_move = false,
       watch_dir = nil,
     })
+    inlayhints.on_attach(client, buffer)
     -- required to fix code action ranges and filter diagnostics
     ts_utils.setup_client(client)
     -- no default maps, so you may want to define some here
