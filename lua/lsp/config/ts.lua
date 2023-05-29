@@ -17,6 +17,7 @@ local opts = coq.lsp_ensure_capabilities({
     -- 绑定快捷键
     keybindings.lsp.map(buffer)
     -- defaults
+    inlayhints.on_attach(client, buffer)
     ts_utils.setup({
       debug = false,
       disable_commands = false,
@@ -56,7 +57,6 @@ local opts = coq.lsp_ensure_capabilities({
       require_confirmation_on_move = false,
       watch_dir = nil,
     })
-    inlayhints.on_attach(client, buffer)
     -- required to fix code action ranges and filter diagnostics
     ts_utils.setup_client(client)
     -- no default maps, so you may want to define some here

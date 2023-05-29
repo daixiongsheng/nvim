@@ -63,6 +63,7 @@ local pluginConfigs = {
       "neovim/nvim-lspconfig",
     },
   },
+  "kdheepak/lazygit.nvim",
   ["nvim-tree/nvim-tree.lua"] = {
     requires = "nvim-tree/nvim-web-devicons",
   },

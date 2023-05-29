@@ -21,7 +21,7 @@ autocmd("TermOpen", {
   command = "startinsert",
 })
 
-local pattern = { "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx", "*.css", "*.less", "*.scss" }
+local pattern = { "*.html", "*.lua", "*.py", "*.sh", "*.js", "*.ts", "*.tsx", "*.jsx", "*.css", "*.less", "*.scss" }
 -- 保存时自动格式化
 autocmd("BufWritePre", {
   group = myAutoGroup,
