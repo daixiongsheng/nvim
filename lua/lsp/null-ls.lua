@@ -4,6 +4,7 @@ if not status then
   return
 end
 
+-- local eslint = require("eslint")
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
@@ -84,3 +85,22 @@ null_ls.setup({
     -- end
   end,
 })
+-- eslint.setup({
+--   bin = "eslint", -- or `eslint_d`
+--   code_actions = {
+--     enable = true,
+--     apply_on_save = {
+--       enable = true,
+--       types = { "directive", "problem", "suggestion", "layout" },
+--     },
+--     disable_rule_comment = {
+--       enable = true,
+--       location = "separate_line", -- or `same_line`
+--     },
+--   },
+--   diagnostics = {
+--     enable = true,
+--     report_unused_disable_directives = false,
+--     run_on = "type", -- or `save`
+--   },
+-- })
