@@ -4,7 +4,7 @@ if not status then
   return
 end
 
--- local eslint = require("eslint")
+-- local eslint = require("lspconfig.eslint")
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
 local code_actions = null_ls.builtins.code_actions
@@ -43,6 +43,9 @@ null_ls.setup({
     -- pip install black
     -- asdf reshim python
     formatting.black.with({ extra_args = { "--fast" } }),
+    -- formatting.eslint_d,
+    -- diagnostics.eslint_d,
+    -- code_actions.eslint_d,
     -----------------------------------------------------
     -- Ruby
     -- gem install rubocop
@@ -69,9 +72,13 @@ null_ls.setup({
     -- diagnostics.eslint,
     -- code actions ---------------------
     code_actions.gitsigns,
-    -- code_actions.eslint,
+    -- code_actions.eslint_d,
+    code_actions.impl,
+    code_actions.refactoring,
+    code_actions.xo,
+    -- completion.spell,
     -- code_actions.eslint.with({
-    --   prefer_local = "node_modules/.bin",
+    --   prefer_local = "/Users/bytedance/Documents/project/bytedance/slide/infra/node_modules/.bin ",
     -- }),
   },
   -- #{m}: message
@@ -86,7 +93,7 @@ null_ls.setup({
   end,
 })
 -- eslint.setup({
---   bin = "eslint", -- or `eslint_d`
+--   bin = "eslint_d", -- or `eslint_d`
 --   code_actions = {
 --     enable = true,
 --     apply_on_save = {

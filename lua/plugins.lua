@@ -144,6 +144,7 @@ local pluginConfigs = {
   "tami5/lspsaga.nvim",
   -- 代码格式化
   "mhartington/formatter.nvim",
+  "MunifTanjim/eslint.nvim",
   ["jose-elias-alvarez/null-ls.nvim"] = {
     requires = "nvim-lua/plenary.nvim",
   },
