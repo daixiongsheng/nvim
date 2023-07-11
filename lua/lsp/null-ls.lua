@@ -11,7 +11,6 @@ local code_actions = null_ls.builtins.code_actions
 local completion = null_ls.builtins.completion
 
 null_ls.setup({
-  debug = false,
   sources = {
     -- Formatting ---------------------
     --  brew install shfmt
@@ -38,7 +37,7 @@ null_ls.setup({
     }),
     -- rustfmt
     -- rustup component add rustfmt
-    formatting.rustfmt,
+    -- formatting.rustfmt,
     -- Python
     -- pip install black
     -- asdf reshim python
@@ -73,9 +72,9 @@ null_ls.setup({
     -- code actions ---------------------
     code_actions.gitsigns,
     -- code_actions.eslint_d,
-    code_actions.impl,
+    -- code_actions.impl,
     code_actions.refactoring,
-    code_actions.xo,
+    -- code_actions.xo,
     -- completion.spell,
     -- code_actions.eslint.with({
     --   prefer_local = "/Users/bytedance/Documents/project/bytedance/slide/infra/node_modules/.bin ",
