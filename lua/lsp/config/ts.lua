@@ -1,6 +1,6 @@
 local keybindings = require("keybindings")
 local ts_utils = require("nvim-lsp-ts-utils")
-local inlayhints = require("lsp-inlayhints")
+-- local inlayhints = require("lsp-inlayhints")
 local coq = require("coq")
 
 local opts = coq.lsp_ensure_capabilities({
@@ -17,7 +17,7 @@ local opts = coq.lsp_ensure_capabilities({
     -- 绑定快捷键
     keybindings.lsp.map(buffer)
     -- defaults
-    inlayhints.on_attach(client, buffer)
+    -- inlayhints.on_attach(client, buffer)
     ts_utils.setup({
       debug = false,
       disable_commands = false,

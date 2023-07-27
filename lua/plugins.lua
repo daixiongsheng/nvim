@@ -34,7 +34,7 @@ local pluginConfigs = {
   "wbthomason/packer.nvim",
   -- nvim-web-devicons
   "nvim-tree/nvim-web-devicons",
-  "arkav/lualine-lsp-progress",
+  -- "arkav/lualine-lsp-progress",
   "gbprod/yanky.nvim",
   -- bufferline
   ["akinsho/bufferline.nvim"] = {
@@ -43,27 +43,27 @@ local pluginConfigs = {
       "famiu/bufdelete.nvim",
     },
   },
-  ["lvimuser/lsp-inlayhints.nvim"] = {
-    branch = "anticonceal",
-  },
+  -- ["lvimuser/lsp-inlayhints.nvim"] = {
+  --   branch = "anticonceal",
+  -- },
   -- lualine
-  ["nvim-lualine/lualine.nvim"] = {
-    requires = { "nvim-tree/nvim-web-devicons", opt = true },
-  },
+  -- ["nvim-lualine/lualine.nvim"] = {
+  --   requires = { "nvim-tree/nvim-web-devicons", opt = true },
+  -- },
   -- telescope
   ["nvim-telescope/telescope.nvim"] = {
     requires = { "nvim-lua/plenary.nvim" },
   },
   -- telescope extensions
-  "LinArcX/telescope-env.nvim",
-  "nvim-telescope/telescope-ui-select.nvim",
+  -- "LinArcX/telescope-env.nvim",
+  -- "nvim-telescope/telescope-ui-select.nvim",
   -- notify
-  ["rcarriga/nvim-notify"] = {
-    requires = {
-      "neovim/nvim-lspconfig",
-    },
-  },
-  "kdheepak/lazygit.nvim",
+  -- ["rcarriga/nvim-notify"] = {
+  --   requires = {
+  --     "neovim/nvim-lspconfig",
+  --   },
+  -- },
+  -- "kdheepak/lazygit.nvim",
   ["nvim-tree/nvim-tree.lua"] = {
     requires = "nvim-tree/nvim-web-devicons",
   },
@@ -80,27 +80,27 @@ local pluginConfigs = {
   "ethanholz/nvim-lastplace",
   -- git
   -- fugitive
-  ["tpope/vim-fugitive"] = {
-    cmd = {
-      "G",
-      "Git",
-      "Gdiff",
-      "Gdiffsplit",
-      "Gread",
-      "Gwrite",
-      "Ggrep",
-      "GMove",
-      "GDelete",
-      "GBrowse",
-      "GRemove",
-      "GRename",
-      "Glgrep",
-      "Gedit",
-    },
-    ft = { "fugitive" },
-  },
+  -- ["tpope/vim-fugitive"] = {
+  --   cmd = {
+  --     "G",
+  --     "Git",
+  --     "Gdiff",
+  --     "Gdiffsplit",
+  --     "Gread",
+  --     "Gwrite",
+  --     "Ggrep",
+  --     "GMove",
+  --     "GDelete",
+  --     "GBrowse",
+  --     "GRemove",
+  --     "GRename",
+  --     "Glgrep",
+  --     "Gedit",
+  --   },
+  --   ft = { "fugitive" },
+  -- },
   "tpope/vim-repeat",
-  "styled-components/vim-styled-components",
+  -- "styled-components/vim-styled-components",
   "terryma/vim-expand-region",
   "bronson/vim-trailing-whitespace",
   -- LSP
@@ -115,16 +115,16 @@ local pluginConfigs = {
       "L3MON4D3/LuaSnip",
     },
   },
-  ["SmiteshP/nvim-navic"] = {
-    requires = "neovim/nvim-lspconfig",
-  },
-  ["SmiteshP/nvim-navbuddy"] = {
-    requires = {
-      "neovim/nvim-lspconfig",
-      "SmiteshP/nvim-navic",
-      "MunifTanjim/nui.nvim",
-    },
-  },
+  -- ["SmiteshP/nvim-navic"] = {
+  --   requires = "neovim/nvim-lspconfig",
+  -- },
+  -- ["SmiteshP/nvim-navbuddy"] = {
+  --   requires = {
+  --     "neovim/nvim-lspconfig",
+  --     "SmiteshP/nvim-navic",
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  -- },
   -- 补全引擎
   "hrsh7th/nvim-cmp",
   -- Snippet 引擎
@@ -144,7 +144,7 @@ local pluginConfigs = {
   "tami5/lspsaga.nvim",
   -- 代码格式化
   "mhartington/formatter.nvim",
-  "MunifTanjim/eslint.nvim",
+  -- "MunifTanjim/eslint.nvim",
   ["jose-elias-alvarez/null-ls.nvim"] = {
     requires = "nvim-lua/plenary.nvim",
   },
@@ -156,7 +156,7 @@ local pluginConfigs = {
   -- JSON 增强
   "b0o/schemastore.nvim",
   -- Rust 增强
-  "simrat39/rust-tools.nvim",
+  -- "simrat39/rust-tools.nvim",
   -- colorschemes
   "lunarvim/colorschemes",
   "folke/tokyonight.nvim",
@@ -175,10 +175,10 @@ local pluginConfigs = {
     -- omit to use `main` branch for the latest features
     tag = "*",
   },
-  ["SmiteshP/nvim-gps"] = {
-    requires = "nvim-treesitter/nvim-treesitter",
-  },
-  "famiu/feline.nvim",
+  -- ["SmiteshP/nvim-gps"] = {
+  --   requires = "nvim-treesitter/nvim-treesitter",
+  -- },
+  -- "famiu/feline.nvim",
   -- Comment
   "numToStr/Comment.nvim",
   "JoosepAlviste/nvim-ts-context-commentstring",
@@ -188,26 +188,26 @@ local pluginConfigs = {
     requires = "nvim-lua/plenary.nvim",
   },
   -- conflict
-  "rhysd/conflict-marker.vim",
+  -- "rhysd/conflict-marker.vim",
   -- git
-  "lewis6991/gitsigns.nvim",
-  ["sindrets/diffview.nvim"] = {
-    requires = "nvim-lua/plenary.nvim",
-  },
+  -- "lewis6991/gitsigns.nvim",
+  -- ["sindrets/diffview.nvim"] = {
+  --   requires = "nvim-lua/plenary.nvim",
+  -- },
   "folke/which-key.nvim",
   "windwp/nvim-autopairs",
-  "mfussenegger/nvim-dap",
-  "theHamsta/nvim-dap-virtual-text",
-  ["rcarriga/nvim-dap-ui"] = {
-    requires = { "mfussenegger/nvim-dap" },
-  },
+  -- "mfussenegger/nvim-dap",
+  -- "theHamsta/nvim-dap-virtual-text",
+  -- ["rcarriga/nvim-dap-ui"] = {
+  --   requires = { "mfussenegger/nvim-dap" },
+  -- },
   "jbyuki/one-small-step-for-vimkind",
   -- search
   ["windwp/nvim-spectre"] = {
     requires = "nvim-lua/plenary.nvim",
   },
   -- "j-hui/fidget.nvim",
-  "mattkubej/jest.nvim",
+  -- "mattkubej/jest.nvim",
   "smjonas/inc-rename.nvim",
   "notjedi/nvim-rooter.lua",
   "dnlhc/glance.nvim",

@@ -60,6 +60,25 @@ end
 local disabled_config = {
   "init",
   "template",
+  'lsp-inlayhints',
+  'lualine',
+  'navic',
+  'navbuddy',
+  'rust',
+  'conflict-marker',
+  'gitsigns',
+  'fidget',
+  'notify',
+  -- 'mason',
+  -- 'nvim-lastplace',
+  -- 'indent-blankline',
+  -- 'vim-repeat',
+  -- 'vim-trailing-whitespace',
+  'formatter',
+  -- 'null-ls',
+  'nvim-gps',
+  -- 'nvim-tree',
+  -- 'nvim-treesitter',
 }
 
 M.init = function(target)
