@@ -6,7 +6,7 @@ if not status then
 end
 
 -- 列表操作快捷键
-local list_keys = require("keybindings").nvim_tree
+-- local list_keys = require("keybindings").nvim_tree
 
 local function open_nvim_tree(data)
   -- buffer is a directory
@@ -72,7 +72,7 @@ nvim_tree.setup({
     },
     exclude = {
       "only_dev.js",
-      "local"
+      "local",
     },
   },
   view = {
@@ -83,11 +83,11 @@ nvim_tree.setup({
     -- 隐藏根目录
     hide_root_folder = false,
     -- 自定义列表中快捷键
-    mappings = {
-      -- 只用定制的快捷键
-      custom_only = true,
-      list = list_keys,
-    },
+    -- mappings = {
+    --   -- 只用定制的快捷键
+    --   custom_only = true,
+    --   list = list_keys,
+    -- },
     -- 显示行数
     number = true,
     relativenumber = false,

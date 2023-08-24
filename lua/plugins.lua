@@ -190,7 +190,7 @@ local pluginConfigs = {
   -- conflict
   -- "rhysd/conflict-marker.vim",
   -- git
-  -- "lewis6991/gitsigns.nvim",
+  "lewis6991/gitsigns.nvim",
   -- ["sindrets/diffview.nvim"] = {
   --   requires = "nvim-lua/plenary.nvim",
   -- },
