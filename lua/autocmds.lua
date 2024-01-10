@@ -27,7 +27,9 @@ autocmd("BufWritePre", {
   group = myAutoGroup,
   pattern = pattern,
   callback = function()
-    vim.lsp.buf.format({ sync = true })
+    pcall(function()
+      vim.lsp.buf.format({ sync = true })
+    end)
   end,
 })
 

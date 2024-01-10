@@ -51,9 +51,9 @@ M.setup = function(Map)
   map("i", "<c-k>", "<up>")
 
   -- Ctrl + S to save
-  map("n", "<C-s>", "<cmd>w<CR>")
-  map("i", "<C-s>", "<ESC><cmd>w<CR>a")
-  map("v", "<C-s>", "<cmd>w<CR>")
+  map("n", "<C-s>", "<cmd>w!<CR>")
+  map("i", "<C-s>", "<ESC><cmd>w!<CR>a")
+  map("v", "<C-s>", "<cmd>w!<CR>")
 
   -- treesitter 折叠
   map("n", "<leader>Z", ":foldclose<CR>")
