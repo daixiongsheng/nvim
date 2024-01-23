@@ -191,9 +191,9 @@ local pluginConfigs = {
   -- "rhysd/conflict-marker.vim",
   -- git
   "lewis6991/gitsigns.nvim",
-  -- ["sindrets/diffview.nvim"] = {
-  --   requires = "nvim-lua/plenary.nvim",
-  -- },
+  ["sindrets/diffview.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+  },
   "folke/which-key.nvim",
   "windwp/nvim-autopairs",
   -- "mfussenegger/nvim-dap",
