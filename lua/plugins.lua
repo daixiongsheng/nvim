@@ -219,7 +219,7 @@ local pluginConfigs = {
   ["phaazon/hop.nvim"] = {
     branch = "v2", -- optional but strongly recommended
   },
-  'https://code.byted.org/zhanghaoyang.tomoko/dummy-coder.nvim'
+  "https://code.byted.org/zhanghaoyang.tomoko/dummy-coder.nvim",
 }
 
 packer.startup({
